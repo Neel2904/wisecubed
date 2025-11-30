@@ -112,7 +112,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-text-muted leading-relaxed">
                 <p>
-                  We founded NexusAI after watching too many businesses struggle with the same problems: manual
+                  We founded WiseCubed after watching too many businesses struggle with the same problems: manual
                   processes that eat up time, off-the-shelf software that doesn&apos;t quite fit, and AI hype that never
                   delivers.
                 </p>
@@ -122,7 +122,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   We&apos;ve sat in the engineering seats at companies like Google, Stripe, and OpenAI. We&apos;ve seen
-                  what works and what doesn&apos;t. And we&apos;ve built NexusAI to be the partner we wished existed
+                  what works and what doesn&apos;t. And we&apos;ve built WiseCubed to be the partner we wished existed
                   when we were on the other side.
                 </p>
                 <p className="font-medium text-text-primary">
