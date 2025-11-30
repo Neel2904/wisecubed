@@ -1,0 +1,23 @@
+# Dependencies
+node_modules
+
+# Builds and output
+.next
+out
+.turbo
+
+# Environment and local config
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.vercel
+
+# OS / editors / logs
+.DS_Store
+*.log
+*.tgz
+coverage
+dist
+.idea
+.vscode
