@@ -33,13 +33,38 @@ export function Navigation() {
       )}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] md:h-20 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-cyan flex items-center justify-center">
-            <span className="text-navy font-bold text-lg font-heading">N</span>
-          </div>
-          <span className="text-white font-heading font-bold text-xl tracking-tight">NexusAI</span>
-        </Link>
+        <Link href="/" style={{ textDecoration: 'none' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div
+                style={{
+                  width: '36px',
+                  height: '36px',
+                  background: 'linear-gradient(135deg, #38BDF8 0%, #22C55E 100%)',
+                  borderRadius: '8px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontFamily: 'Space Grotesk',
+                  fontWeight: '700',
+                  fontSize: '18px',
+                  color: '#0F172A',
+                }}
+              >
+                W³
+              </div>
+              <span
+                style={{
+                  fontFamily: 'Space Grotesk',
+                  fontSize: '24px',
+                  fontWeight: '600',
+                  color: '#FFFFFF',
+                  letterSpacing: '-0.02em',
+                }}
+              >
+                WiseCubed
+              </span>
+            </div>
+          </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
