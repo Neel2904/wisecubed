@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Linkedin, Twitter, Github } from "lucide-react"
+import Image from "next/image"
 
 const footerLinks = {
   services: [
@@ -32,23 +33,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-            <div
-                style={{
-                  width: '36px',
-                  height: '36px',
-                  background: 'linear-gradient(135deg, #38BDF8 0%, #22C55E 100%)',
-                  borderRadius: '8px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontFamily: 'Space Grotesk',
-                  fontWeight: '700',
-                  fontSize: '18px',
-                  color: '#0F172A',
-                }}
-              >
-                W³
-              </div>
+              <Image src="/logo_curved.png" alt="WiseCubed logo" width={36} height={36} priority />
               <span className="text-white font-heading font-bold text-xl tracking-tight">WiseCubed</span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">

@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -35,23 +36,7 @@ export function Navigation() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] md:h-20 flex items-center justify-between">
         <Link href="/" style={{ textDecoration: 'none' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <div
-                style={{
-                  width: '36px',
-                  height: '36px',
-                  background: 'linear-gradient(135deg, #38BDF8 0%, #22C55E 100%)',
-                  borderRadius: '8px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontFamily: 'Space Grotesk',
-                  fontWeight: '700',
-                  fontSize: '18px',
-                  color: '#0F172A',
-                }}
-              >
-                W³
-              </div>
+              <Image src="/logo_curved.png" alt="WiseCubed logo" width={36} height={36} priority />
               <span
                 style={{
                   fontFamily: 'Space Grotesk',

@@ -19,7 +19,9 @@ export const metadata: Metadata = {
   description:
     "We build AI-powered systems that actually ship. Custom software development, AI automation, and strategic consulting for modern businesses.",
   keywords: ["AI automation", "custom software", "business automation", "AI consulting", "workflow automation"],
-    generator: 'v0.app'
+  icons: {
+    icon: "/logo_curved.png",
+  },
 }
 
 export const viewport: Viewport = {
