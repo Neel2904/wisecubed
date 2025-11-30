@@ -5,7 +5,7 @@ const caseStudies = [
   {
     industry: "Fintech",
     company: "PayFlow Inc.",
-    challenge: "Manual invoice processing taking 40+ hours weekly",
+    challenge: "Manual invoice processings taking 40+ hours weekly",
     solution: "AI-powered document extraction and automated workflow",
     results: [
       { icon: TrendingDown, value: "-85%", label: "Manual Work" },
