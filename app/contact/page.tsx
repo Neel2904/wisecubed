@@ -86,10 +86,10 @@ export default function ContactPage() {
                       <div>
                         <p className="text-text-muted text-sm mb-1">Email</p>
                         <a
-                          href="mailto:hello@nexusai.dev"
+                          href="mailto:neel@wisecubed.tech"
                           className="text-text-primary font-medium hover:text-cyan transition-colors"
                         >
-                          hello@nexusai.dev
+                          neel@wisecubed.tech
                         </a>
                       </div>
                     </div>

@@ -35,7 +35,7 @@ export function Footer() {
               <div className="w-8 h-8 rounded-lg bg-cyan flex items-center justify-center">
                 <span className="text-navy font-bold text-lg font-heading">N</span>
               </div>
-              <span className="text-white font-heading font-bold text-xl tracking-tight">NexusAI</span>
+              <span className="text-white font-heading font-bold text-xl tracking-tight">WiseCubed</span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               We build AI-powered systems that actually ship. Modern software development and automation for ambitious
@@ -90,8 +90,8 @@ export function Footer() {
             <h3 className="text-white font-semibold mb-4">Contact</h3>
             <ul className="space-y-3 text-white/60 text-sm">
               <li>
-                <a href="mailto:hello@nexusai.dev" className="hover:text-cyan transition-colors">
-                  hello@nexusai.dev
+                <a href="mailto:neel@wisecubed.tech" className="hover:text-cyan transition-colors">
+                  neel@wisecubed.tech
                 </a>
               </li>
               <li>San Francisco, CA</li>
@@ -102,7 +102,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-white/40 text-sm">© {new Date().getFullYear()} NexusAI. All rights reserved.</p>
+          <p className="text-white/40 text-sm">© {new Date().getFullYear()} WiseCubed. All rights reserved.</p>
           <div className="flex gap-6">
             {footerLinks.legal.map((link, i) => (
               <Link key={i} href={link.href} className="text-white/40 hover:text-white/60 text-sm transition-colors">
