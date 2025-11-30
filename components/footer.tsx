@@ -20,7 +20,7 @@ const footerLinks = {
 
 const socialLinks = [
   { icon: Linkedin, href: "https://www.linkedin.com/company/wisecubed", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Twitter, href: "https://x.com/wise3cubed", label: "Twitter" },
   { icon: Github, href: "#", label: "GitHub" },
 ]
 
