@@ -15,7 +15,7 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: "NexusAI | AI-Powered Software & Automation",
+  title: "WiseCubed | AI-Powered Software & Automation",
   description:
     "We build AI-powered systems that actually ship. Custom software development, AI automation, and strategic consulting for modern businesses.",
   keywords: ["AI automation", "custom software", "business automation", "AI consulting", "workflow automation"],

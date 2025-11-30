@@ -19,8 +19,8 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/wisecubed", label: "LinkedIn" },
+  { icon: Twitter, href: "https://x.com/wise3cubed", label: "Twitter" },
   { icon: Github, href: "#", label: "GitHub" },
 ]
 
@@ -32,8 +32,22 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-cyan flex items-center justify-center">
-                <span className="text-navy font-bold text-lg font-heading">N</span>
+            <div
+                style={{
+                  width: '36px',
+                  height: '36px',
+                  background: 'linear-gradient(135deg, #38BDF8 0%, #22C55E 100%)',
+                  borderRadius: '8px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontFamily: 'Space Grotesk',
+                  fontWeight: '700',
+                  fontSize: '18px',
+                  color: '#0F172A',
+                }}
+              >
+                W³
               </div>
               <span className="text-white font-heading font-bold text-xl tracking-tight">WiseCubed</span>
             </Link>
@@ -47,6 +61,7 @@ export function Footer() {
               {socialLinks.map((social, i) => (
                 <a
                   key={i}
+                  target="_blank"
                   href={social.href}
                   className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-cyan/20 transition-colors"
                   aria-label={social.label}
