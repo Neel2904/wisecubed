@@ -10,7 +10,7 @@ const footerLinks = {
   ],
   company: [
     { label: "About Us", href: "/about" },
-    { label: "Case Studies", href: "/case-studies" },
+    // { label: "Case Studies", href: "/case-studies" },
     { label: "Contact", href: "/contact" },
   ],
   legal: [
@@ -95,7 +95,7 @@ export function Footer() {
                   neel@wisecubed.tech
                 </a>
               </li>
-              <li>San Francisco, CA</li>
+              <li>Gujarat, India</li>
               <li>UTC-8 (PST)</li>
             </ul>
           </div>
