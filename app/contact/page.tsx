@@ -17,28 +17,50 @@ const projectTypes = [
   "Not sure yet",
 ]
 
+const initialFormState = {
+  name: "",
+  email: "",
+  company: "",
+  role: "",
+  projectType: "",
+  budget: "",
+  message: "",
+}
+
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    role: "",
-    projectType: "",
-    budget: "",
-    message: "",
-  })
+  const [error, setError] = useState<string | null>(null)
+  const [formData, setFormData] = useState(initialFormState)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setError(null)
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      if (!response.ok) {
+        const data = await response.json().catch(() => null)
+        throw new Error(data?.error || "Failed to send your message.")
+      }
+
+      setIsSubmitted(true)
+      setFormData(initialFormState)
+    } catch (err) {
+      console.error(err)
+      setError(err instanceof Error ? err.message : "Failed to send your message.")
+      setIsSubmitted(false)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -297,6 +319,8 @@ export default function ContactPage() {
                         </>
                       )}
                     </Button>
+
+                    {error ? <p className="text-sm text-red-600">{error}</p> : null}
 
                     <p className="text-text-muted text-sm">
                       By submitting, you agree to our privacy policy. We&apos;ll never share your information.
