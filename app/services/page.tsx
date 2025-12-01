@@ -87,11 +87,6 @@ const faqs = [
       "Yes, we offer flexible maintenance and support packages. This includes bug fixes, performance monitoring, feature updates, and scaling support as your needs grow.",
   },
   {
-    question: "How do you handle data security and compliance?",
-    answer:
-      "Security is built into our process from day one. We follow industry best practices, implement proper authentication and encryption, and can work within specific compliance frameworks (HIPAA, SOC 2, GDPR).",
-  },
-  {
     question: "What's your pricing model?",
     answer:
       "We offer both project-based and retainer engagements depending on your needs. After an initial scoping call, we provide transparent, fixed-price quotes with clearly defined deliverables.",
