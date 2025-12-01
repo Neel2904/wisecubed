@@ -28,14 +28,12 @@ export function TestimonialsSection() {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-text-primary mb-4 tracking-tight">
             What Our Clients Say
           </h2>
         </div>
 
-        {/* Testimonials Grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, i) => (
             <div key={i} className="bg-bg-light rounded-2xl p-8 border border-bg-mid relative">
@@ -44,7 +42,7 @@ export function TestimonialsSection() {
               <p className="text-text-primary leading-relaxed mb-6 relative z-10">&ldquo;{testimonial.quote}&rdquo;</p>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan/20 to-cyan/5 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-linear-to-br from-cyan/20 to-cyan/5 flex items-center justify-center">
                   <span className="text-cyan font-bold text-lg">{testimonial.name.charAt(0)}</span>
                 </div>
                 <div>
