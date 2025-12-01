@@ -9,7 +9,7 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen bg-navy overflow-hidden">
       {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-navy/90" />
+      <div className="absolute inset-0 bg-linear-to-br from-navy via-navy to-navy/90" />
       <div className="absolute inset-0 opacity-[0.03] noise-texture" />
 
       {/* Subtle grid pattern */}
@@ -28,7 +28,7 @@ export function HeroSection() {
             {/* Tag */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan/30 bg-cyan/5">
               <Sparkles className="w-4 h-4 text-cyan" />
-              <span className="text-cyan text-xs font-semibold tracking-[0.1em] uppercase">
+              <span className="text-cyan text-xs font-semibold tracking-widest uppercase">
                 Software • AI • Automation
               </span>
             </div>
@@ -66,17 +66,6 @@ export function HeroSection() {
               </Link>
             </div>
 
-            {/* Social Proof */}
-            <div className="pt-8 border-t border-white/10">
-              <p className="text-white/50 text-sm mb-4">Trusted by teams across</p>
-              <div className="flex flex-wrap items-center gap-6">
-                {["Fintech", "Healthcare", "SaaS", "E-commerce", "Logistics"].map((industry) => (
-                  <span key={industry} className="text-white/40 text-sm font-medium">
-                    {industry}
-                  </span>
-                ))}
-              </div>
-            </div>
           </div>
 
           {/* Right Column - Visual */}

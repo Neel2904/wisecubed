@@ -17,9 +17,9 @@ export default function Home() {
       <ValueProps />
       <ServicesSection />
       <ProcessSection />
-      <CaseStudiesSection />
+      {/* <CaseStudiesSection /> */}
       <TechStack />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <CTASection />
       <Footer />
     </main>
