@@ -9,7 +9,7 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen bg-navy overflow-hidden">
       {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-navy/90" />
+      <div className="absolute inset-0 bg-linear-to-br from-navy via-navy to-navy/90" />
       <div className="absolute inset-0 opacity-[0.03] noise-texture" />
 
       {/* Subtle grid pattern */}
