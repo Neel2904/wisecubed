@@ -1,6 +1,6 @@
 import Link from "next/link"
-import { Linkedin, Twitter, Github } from "lucide-react"
 import Image from "next/image"
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6"
 
 const footerLinks = {
   services: [
@@ -20,9 +20,10 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { icon: Linkedin, href: "https://www.linkedin.com/company/wisecubed", label: "LinkedIn" },
-  { icon: Twitter, href: "https://x.com/wise3cubed", label: "Twitter" },
-  { icon: Github, href: "#", label: "GitHub" },
+  { icon: FaLinkedinIn, href: "https://www.linkedin.com/company/wisecubed", label: "LinkedIn" },
+  { icon: FaXTwitter, href: "https://x.com/wise3cubed", label: "Twitter" },
+  { icon: FaInstagram, href: "https://www.instagram.com/wisecubed", label: "Instagram" },
+  { icon: FaFacebookF, href: "https://www.facebook.com/profile.php?id=61584613946854", label: "Facebook" },
 ]
 
 export function Footer() {
