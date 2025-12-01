@@ -35,7 +35,7 @@ export function HeroVisual() {
                 className={`bg-white/5 rounded-lg p-3 border border-white/5 ${
                   mounted ? "animate-in fade-in slide-in-from-bottom-2" : "opacity-0"
                 }`}
-                style={{ animationDelay: `${i * 100}ms`, animationFillMode: "forwards" }}
+                style={{ animationDelay: `${i * 500}ms`, animationFillMode: "forwards" }}
               >
                 <p className="text-white/50 text-xs mb-1">{stat.label}</p>
                 <p className="text-white font-heading font-bold text-lg">{stat.value}</p>
@@ -62,7 +62,7 @@ export function HeroVisual() {
                   >
                     <span className="text-xs text-white/80">{i + 1}</span>
                   </div>
-                  {i < 3 && <div className="w-8 h-px bg-gradient-to-r from-white/20 to-cyan/40 mx-1" />}
+                  {i < 3 && <div className="w-8 h-px bg-linear-to-r from-white/20 to-cyan/40 mx-1" />}
                 </div>
               ))}
             </div>

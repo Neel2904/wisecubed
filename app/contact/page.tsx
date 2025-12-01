@@ -6,6 +6,9 @@ import { useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Textarea } from "@/components/ui/textarea"
 import { Mail, MapPin, Clock, CheckCircle2, ArrowRight, Loader2 } from "lucide-react"
 
 const budgetRanges = ["Under $10,000", "$10,000 - $25,000", "$25,000 - $50,000", "$50,000 - $100,000", "$100,000+"]
@@ -63,7 +66,7 @@ export default function ContactPage() {
     }
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
@@ -122,7 +125,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <p className="text-text-muted text-sm mb-1">Location</p>
-                        <p className="text-text-primary font-medium">San Francisco, CA</p>
+                        <p className="text-text-primary font-medium">Gujarat, India</p>
                       </div>
                     </div>
 
@@ -181,14 +184,14 @@ export default function ContactPage() {
                         <label htmlFor="name" className="block text-text-primary font-medium text-sm mb-2">
                           Name *
                         </label>
-                        <input
+                        <Input
                           type="text"
                           id="name"
                           name="name"
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 rounded-lg border border-bg-mid bg-bg-light focus:border-cyan focus:ring-1 focus:ring-cyan outline-none transition-colors text-text-primary"
+                          className="h-10 rounded-lg border-bg-mid bg-bg-light text-text-primary px-4 focus:border-cyan focus:ring-1 focus:ring-cyan"
                           placeholder="John Smith"
                         />
                       </div>
@@ -197,14 +200,14 @@ export default function ContactPage() {
                         <label htmlFor="email" className="block text-text-primary font-medium text-sm mb-2">
                           Email *
                         </label>
-                        <input
+                        <Input
                           type="email"
                           id="email"
                           name="email"
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 rounded-lg border border-bg-mid bg-bg-light focus:border-cyan focus:ring-1 focus:ring-cyan outline-none transition-colors text-text-primary"
+                          className="h-10 rounded-lg border-bg-mid bg-bg-light text-text-primary px-4 focus:border-cyan focus:ring-1 focus:ring-cyan"
                           placeholder="john@company.com"
                         />
                       </div>
@@ -215,13 +218,13 @@ export default function ContactPage() {
                         <label htmlFor="company" className="block text-text-primary font-medium text-sm mb-2">
                           Company
                         </label>
-                        <input
+                        <Input
                           type="text"
                           id="company"
                           name="company"
                           value={formData.company}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-lg border border-bg-mid bg-bg-light focus:border-cyan focus:ring-1 focus:ring-cyan outline-none transition-colors text-text-primary"
+                          className="h-10 rounded-lg border-bg-mid bg-bg-light text-text-primary px-4 focus:border-cyan focus:ring-1 focus:ring-cyan"
                           placeholder="Acme Inc."
                         />
                       </div>
@@ -230,13 +233,13 @@ export default function ContactPage() {
                         <label htmlFor="role" className="block text-text-primary font-medium text-sm mb-2">
                           Role
                         </label>
-                        <input
+                        <Input
                           type="text"
                           id="role"
                           name="role"
                           value={formData.role}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-lg border border-bg-mid bg-bg-light focus:border-cyan focus:ring-1 focus:ring-cyan outline-none transition-colors text-text-primary"
+                          className="h-10 rounded-lg border-bg-mid bg-bg-light text-text-primary px-4 focus:border-cyan focus:ring-1 focus:ring-cyan"
                           placeholder="Head of Operations"
                         />
                       </div>
@@ -247,41 +250,55 @@ export default function ContactPage() {
                         <label htmlFor="projectType" className="block text-text-primary font-medium text-sm mb-2">
                           What do you need? *
                         </label>
-                        <select
-                          id="projectType"
+                        <Select
                           name="projectType"
-                          value={formData.projectType}
-                          onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 rounded-lg border border-bg-mid bg-bg-light focus:border-cyan focus:ring-1 focus:ring-cyan outline-none transition-colors text-text-primary"
+                          value={formData.projectType}
+                          onValueChange={(value) =>
+                            setFormData((prev) => ({
+                              ...prev,
+                              projectType: value,
+                            }))
+                          }
                         >
-                          <option value="">Select a service</option>
-                          {projectTypes.map((type) => (
-                            <option key={type} value={type}>
-                              {type}
-                            </option>
-                          ))}
-                        </select>
+                          <SelectTrigger className="w-full justify-between rounded-lg border border-bg-mid bg-bg-light text-text-primary h-12 focus:border-cyan focus:ring-1 focus:ring-cyan">
+                            <SelectValue placeholder="Select a service" />
+                          </SelectTrigger>
+                          <SelectContent className="bg-white border border-bg-mid">
+                            {projectTypes.map((type) => (
+                              <SelectItem key={type} value={type}>
+                                {type}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
                       </div>
 
                       <div>
                         <label htmlFor="budget" className="block text-text-primary font-medium text-sm mb-2">
                           Budget Range
                         </label>
-                        <select
-                          id="budget"
+                        <Select
                           name="budget"
                           value={formData.budget}
-                          onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-lg border border-bg-mid bg-bg-light focus:border-cyan focus:ring-1 focus:ring-cyan outline-none transition-colors text-text-primary"
+                          onValueChange={(value) =>
+                            setFormData((prev) => ({
+                              ...prev,
+                              budget: value,
+                            }))
+                          }
                         >
-                          <option value="">Select budget</option>
-                          {budgetRanges.map((range) => (
-                            <option key={range} value={range}>
-                              {range}
-                            </option>
-                          ))}
-                        </select>
+                          <SelectTrigger className="w-full justify-between rounded-lg border border-bg-mid bg-bg-light text-text-primary h-12 focus:border-cyan focus:ring-1 focus:ring-cyan">
+                            <SelectValue placeholder="Select budget" />
+                          </SelectTrigger>
+                          <SelectContent className="bg-white border border-bg-mid">
+                            {budgetRanges.map((range) => (
+                              <SelectItem key={range} value={range}>
+                                {range}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
                       </div>
                     </div>
 
@@ -289,14 +306,14 @@ export default function ContactPage() {
                       <label htmlFor="message" className="block text-text-primary font-medium text-sm mb-2">
                         Tell us about your project *
                       </label>
-                      <textarea
+                      <Textarea
                         id="message"
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
                         required
                         rows={5}
-                        className="w-full px-4 py-3 rounded-lg border border-bg-mid bg-bg-light focus:border-cyan focus:ring-1 focus:ring-cyan outline-none transition-colors text-text-primary resize-none"
+                        className="rounded-lg border-bg-mid bg-bg-light text-text-primary px-4 py-3 focus:border-cyan focus:ring-1 focus:ring-cyan resize-none"
                         placeholder="Describe your current challenges and what you're hoping to achieve..."
                       />
                     </div>
